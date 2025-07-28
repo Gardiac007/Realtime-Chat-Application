@@ -1,0 +1,12 @@
+
+services:
+  fastapi-chat:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi-chat
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    restart: always
